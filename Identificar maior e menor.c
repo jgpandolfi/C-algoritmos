@@ -1,30 +1,32 @@
 #include <stdio.h>
 #include <locale.h>
 
-// Algoritmo desenvolvido para a disciplina de Algoritmos e Lógica de Programação
-// da FATEC Taquaritinga - Prof. Brazelino Neto - Discente: José Guilherme Pandolfi
+// Algoritmo desenvolvido para a disciplina de Algoritmos e LÃ³gica de ProgramaÃ§Ã£o
+// da FATEC Taquaritinga - Prof. Brazelino Neto - Discente: JosÃ© Guilherme Pandolfi
 
 int main() {
+    // Configurando a localidade para o idioma portuguÃªs do Brasil (pt_BR) e UTF-8
+    setlocale(LC_ALL, "pt_BR.utf8");
 
-    // Declarando variáveis usadas
+    // Declarando variÃ¡veis usadas
     int num, maior, menor, cont;
 
-    // Instruções ao usuário
-    printf("Identificar o maior e o menor número na sequência:\n\n");
-    printf("Insira a seguir 10 números inteiros:\n");
+    // InstruÃ§Ãµes ao usuÃ¡rio
+    printf("Identificar o maior e o menor nÃºmero na sequÃªncia:\n\n");
+    printf("Insira a seguir 10 nÃºmeros inteiros:\n");
 
-    // Recebendo o primeiro número por fora do loop
-    printf("Número 1: ");
+    // Recebendo o primeiro nÃºmero por fora do loop
+    printf("NÃºmero 1: ");
     scanf("%i", &num);
     maior = num;
     menor = num;
 
-    // Evitando lixo de memória e setando contador do loop para 1
+    // Evitando lixo de memÃ³ria e setando contador do loop para 1
     cont = 1;
 
-    // Recebendo os outros 9 números restantes
+    // Recebendo os outros 9 nÃºmeros restantes
     while (cont < 10) {
-        printf("Número %i: ", cont+1);
+        printf("NÃºmero %i: ", cont+1);
         scanf("%i", &num);
         // Verificar se precisa alterar o maior ou menor
         if (num > maior) {
@@ -37,7 +39,7 @@ int main() {
     }
 
     // Apresentando o resultado
-    printf("\nO maior número digitado foi %i e o menor número digitado foi %i", maior, menor);
+    printf("\nO maior nÃºmero digitado foi %i e o menor nÃºmero digitado foi %i", maior, menor);
 
 return 0;
 }
